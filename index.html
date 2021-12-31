@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bellybutton Biodiversity</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="col-md-12" style="background-color:#EFE8F4">
+  <div class="container">
+    <div class="row">
+      <div class="jumbotron text-center" style="background-color:#485A52">
+        <div class="jumbotron bg-cover" style="background-image:url(https://media.gettyimages.com/videos/floating-cartoon-virus-background-video-id1214990753?s=640x640)">
+          <h1 class="display-6" style="color:white"><strong>Belly Button Biodiversity Dashboard</strong></h1>
+          <p style="color:white">Use the interactive charts below to explore the dataset</p>
+        </div>
+      </div>        
+    </div>
+    <div class="row">
+      <div class="col-md-2">
+        <div class="well" style="background-color:#61776D">
+          <h5 style="color:white"><strong>Test Subject ID No.:</strong></h5>
+          <!-- <select id="selDataset"></select> -->
+          <select id="selDataset" onchange="optionChanged(this.value)"></select>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading" style="background-color:#61776D">
+            <h3 class="panel-title" style="color:white">Demographic Info</h3>
+          </div>
+          <div id="sample-metadata" class="panel-body"></div>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div id="bar"></div>
+          <b>List of the most concentrated bacteria found in belly buttons</b>
+          <p>When you select a Test Subject ID No., the top 10 bacterial species (OTUs) are shown for each person.</p>
+      </div>
+      <div class="col-md-5">
+        <div id="gauge"></div>
+          <b>How many times this person washes their belly button</b>
+          <p>This chart displays the weekly washing frequency's values for each volunteer as a measure from 0-10.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div id="bubble"></div>
+          <b>The bacterial biodiversity of a person's belly button</b>
+          <p>The bubble chart above visualizes the types of bacteria inside each person's belly button.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="/js/static/charts.js"></script>
+
+</body>
+
+</html>
